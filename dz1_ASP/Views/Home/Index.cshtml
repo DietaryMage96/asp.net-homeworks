@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <title>Головна</title>
+    <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f9;
+                color: #333;
+            }
+
+            nav {
+                background: #333;
+                padding: 12px 20px;
+                margin-bottom: 30px;
+            }
+
+                nav a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .gallery {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+                .gallery img {
+                    width: 220px;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="/">Головна</a>
+            <a href="/Home/About">Про мене</a>
+            <a href="/Home/Hobbies">Мої хобі</a>
+            <a href="/Home/Favorites">Улюблене</a>
+            <a href="/Home/Plans">Мої плани</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Привіт! Я — Артур</h1>
+        <p>Вітаю на моєму навчальному сайті! Я вивчаю веб-розробку та C# в ASP.NET Core MVC.</p>
+        <p>Тут ви знайдете базову інформацію про мої навчальні проекти та захоплення.</p>
+
+        <h2>Мої напрямки:</h2>
+        <ul>
+            <li>Розробка на C# / ASP.NET Core</li>
+            <li>Бази даних та SQL</li>
+            <li>Frontend верстка (HTML, CSS, JS)</li>
+        </ul>
+
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="~/images/1.jpg" alt="Фото 1">
+            <img src="~/images/2.jpg" alt="Фото 2">
+            <img src="~/images/3.jpg" alt="Фото 3">
+        </div>
+    </div>
+
+</body>
+</html>

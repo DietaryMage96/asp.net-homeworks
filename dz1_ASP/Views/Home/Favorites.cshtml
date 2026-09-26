@@ -1,0 +1,99 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <title>Улюблене</title>
+    <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f9;
+                color: #333;
+            }
+
+            nav {
+                background: #333;
+                padding: 12px 20px;
+                margin-bottom: 30px;
+            }
+
+                nav a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px 40px;
+            }
+
+            .gallery {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+                .gallery img {
+                    width: 220px;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container" style="padding-bottom: 0;">
+            <a href="/">Головна</a>
+            <a href="/Home/About">Про мене</a>
+            <a href="/Home/Hobbies">Мої хобі</a>
+            <a href="/Home/Favorites">Улюблене</a>
+            <a href="/Home/Plans">Мої плани</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Моє улюблене</h1>
+        <p>Добірка речей, які створюють мій настрій, надихають на розробку та допомагають відпочити.</p>
+
+        <h2>Фільми та серіали</h2>
+        <p>Найбільше подобаються жанри наукової фантастики, детективів та технологічних трилерів:</p>
+        <ul>
+            <li><strong>Жанри:</strong> Наукова фантастика, кіберпанк, трилери про технології</li>
+            <li><strong>Що ціную:</strong> Продуманий сюжет, атмосферне музичне супроводження та якісний візуальний стиль</li>
+        </ul>
+
+        <h2>Музика для роботи та відпочинку</h2>
+        <p>Музика — це важлива частина робочого процесу під час написання коду:</p>
+        <ul>
+            <li><strong>Фонова музика:</strong> Lo-Fi, Synthwave, Ambient (допомагають сфокусуватися на задачах)</li>
+            <li><strong>Енергійна музика:</strong> Рок та електронна музика для гарного настрою</li>
+        </ul>
+
+        <h2>Ігри та віртуальний світ</h2>
+        <p>Захоплююся сучасними ігровими технологіями та віртуальною реальністю:</p>
+        <ul>
+            <li><strong>VR-досвід:</strong> Ігри та додатки у віртуальній реальності</li>
+            <li><strong>Жанри:</strong> Симулятори, стратегії та динамічні онлайн-ігри</li>
+        </ul>
+
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="~/images/cinema.jpg" alt="Кіно та серіали">
+            <img src="~/images/music.jpg" alt="Музика">
+            <img src="~/images/gaming.jpg" alt="Відеоігри та VR">
+        </div>
+    </div>
+
+</body>
+</html>

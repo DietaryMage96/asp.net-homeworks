@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <title>Мої хобі</title>
+    <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f9;
+                color: #333;
+            }
+
+            nav {
+                background: #333;
+                padding: 12px 20px;
+                margin-bottom: 30px;
+            }
+
+                nav a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px 40px;
+            }
+
+            .gallery {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+                .gallery img {
+                    width: 220px;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container" style="padding-bottom: 0;">
+            <a href="/">Головна</a>
+            <a href="/Home/About">Про мене</a>
+            <a href="/Home/Hobbies">Мої хобі</a>
+            <a href="/Home/Favorites">Улюблене</a>
+            <a href="/Home/Plans">Мої плани</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Мої хобі та захоплення</h1>
+        <p>У вільний від навчання час я активно займаюся саморозвитком, програмуванням та технологічними експериментами.</p>
+
+        <h2>Чим я захоплююся:</h2>
+        <ul>
+            <li>
+                <strong>Веб-розробка та створення програм:</strong>
+                Мені подобається розробляти Telegram-ботів, створювати веб-додатки на C# (ASP.NET Core) та експериментувати з Node.js і Next.js.
+            </li>
+            <li>
+                <strong>Адміністрування серверів та Linux:</strong>
+                Цікавлюся налаштуванням remote-серверів через SSH, керуванням фоновими процесами та деплоєм власних сервісів.
+            </li>
+            <li>
+                <strong>Обробка медіа та монтаж відео:</strong>
+                Займаюся автоматизацією обробки відео та зображень за допомогою скриптів на Python та інструменту FFmpeg.
+            </li>
+        </ul>
+
+        <h2>Галерея хобі</h2>
+        <div class="gallery">
+            <img src="~/images/webdev.jpg" alt="Веб-розробка">
+            <img src="~/images/server.jpg" alt="Сервери та Linux">
+            <img src="~/images/video.jpg" alt="Відеомонтаж">
+        </div>
+    </div>
+
+</body>
+</html>

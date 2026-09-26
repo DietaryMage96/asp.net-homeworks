@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <title>Мої плани</title>
+    <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f4f4f9;
+                color: #333;
+            }
+
+            nav {
+                background: #333;
+                padding: 12px 20px;
+                margin-bottom: 30px;
+            }
+
+                nav a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-right: 20px;
+                    font-weight: bold;
+                }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px 40px;
+            }
+
+            .gallery {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+                .gallery img {
+                    width: 220px;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container" style="padding-bottom: 0;">
+            <a href="/">Головна</a>
+            <a href="/Home/About">Про мене</a>
+            <a href="/Home/Hobbies">Мої хобі</a>
+            <a href="/Home/Favorites">Улюблене</a>
+            <a href="/Home/Plans">Мої плани</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Мої плани та цілі</h1>
+        <p>На цій сторінці описані мої ключові цілі та орієнтири, яких я прагну досягти протягом найближчих років у навчанні та розробці.</p>
+
+        <h2>Цілі на найближчі роки</h2>
+        <p>Для мене важливо постійно рухатися вперед та здобувати нові навички у сфері IT та програмування:</p>
+        <ul>
+            <li>
+                <strong>Освоїти Full-Stack розробку:</strong>
+                Поглибити знання C# / ASP.NET Core для створення надійних бекенд-сервісів та поєднати їх із сучасними фронтенд-фреймворками.
+            </li>
+            <li>
+                <strong>Вивчити професійну роботу з базами даних та хмарою:</strong>
+                Освоїти проектування складних баз даних (PostgreSQL) та налаштування серверної інфраструктури.
+            </li>
+            <li>
+                <strong>Удосконалити рівень англійської мови:</strong>
+                Покращити технічну та розмовну англійську для вільного читання документації та спілкування з розробниками по всьому світу.
+            </li>
+        </ul>
+
+        <h2>Галерея планів</h2>
+        <div class="gallery">
+            <img src="~/images/goals.jpg" alt="Цілі та розвиток">
+            <img src="~/images/project.jpg" alt="Власний проект">
+            <img src="~/images/future.jpg" alt="Майбутнє у веб-розробці">
+        </div>
+    </div>
+
+</body>
+</html>
