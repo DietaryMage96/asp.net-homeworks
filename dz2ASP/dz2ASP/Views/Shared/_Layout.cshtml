@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Головна</a> |
+        <a asp-controller="Home" asp-action="About">Про мене</a> |
+        <a asp-controller="Favorite" asp-action="Games">Ігри</a> |
+        <a asp-controller="Favorite" asp-action="Movies">Фільми</a> |
+        <a asp-controller="Favorite" asp-action="Music">Музика</a>
+    </nav>
+    @RenderBody()
+</body>
+</html>
