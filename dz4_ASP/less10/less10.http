@@ -1,0 +1,6 @@
+@less10_HostAddress = http://localhost:5234
+
+GET {{less10_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
