@@ -37,31 +37,33 @@ namespace less10.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateMovieRequest data)
+        public async Task<ActionResult<MovieResponse>> Create([FromBody] CreateMovieRequest data)
         {
             var validationResult = await _createValidator.ValidateAsync(data);
             if (!validationResult.IsValid) return BadRequest(validationResult.Errors);
 
             var dto = _mapper.Map<CreateMovieDto>(data);
 
-            bool isCreated = await _movieService.CreateAsync(dto);
-            if (!isCreated) return BadRequest("Movie already exists");
+            var createdDto = await _movieService.CreateAsync(dto);
+            if (createdDto == null) return BadRequest("Movie already exists");
 
-            return Ok("Movie created");
+            var response = _mapper.Map<MovieResponse>(createdDto);
+            return Ok(response);
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(string id, [FromBody] UpdateMovieRequest data)
+        public async Task<ActionResult<MovieResponse>> Update(string id, [FromBody] UpdateMovieRequest data)
         {
             var validationResult = await _updateValidator.ValidateAsync(data);
             if (!validationResult.IsValid) return BadRequest(validationResult.Errors);
 
             var dto = _mapper.Map<UpdateMovieDto>(data);
 
-            bool isUpdated = await _movieService.UpdateAsync(id, dto);
-            if (!isUpdated) return NotFound("Movie not found");
+            var updatedDto = await _movieService.UpdateAsync(id, dto);
+            if (updatedDto == null) return NotFound("Movie not found");
 
-            return Ok("Movie updated");
+            var response = _mapper.Map<MovieResponse>(updatedDto);
+            return Ok(response);
         }
 
         [HttpDelete("{id:int}")]

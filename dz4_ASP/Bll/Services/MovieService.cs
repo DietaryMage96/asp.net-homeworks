@@ -18,17 +18,17 @@ namespace Bll.Services
             _mapper = mapper;
         }
 
-        public async Task<bool> CreateAsync(CreateMovieDto dto)
+        public async Task<MovieDto?> CreateAsync(CreateMovieDto dto)
         {
-            if (dto == null) return false;
+            if (dto == null) return null;
 
             var movies = await _movieRepository.GetAllAsync();
-            if (movies.Any(m => m.Title == dto.Title)) return false;
+            if (movies.Any(m => m.Title == dto.Title)) return null;
 
             var movie = _mapper.Map<Movie>(dto);
 
             await _movieRepository.Add(movie);
-            return true;
+            return _mapper.Map<MovieDto>(movie);
         }
 
         public async Task<MovieDto?> GetByIdAsync(string id)
@@ -45,17 +45,17 @@ namespace Bll.Services
             return _mapper.Map<List<MovieDto>>(movies);
         }
 
-        public async Task<bool> UpdateAsync(string id, UpdateMovieDto dto)
+        public async Task<MovieDto?> UpdateAsync(string id, UpdateMovieDto dto)
         {
-            if (dto == null) return false;
+            if (dto == null) return null;
 
             var movie = await _movieRepository.GetByIdAsync(id);
-            if (movie == null) return false;
+            if (movie == null) return null;
 
             _mapper.Map(dto, movie);
 
             await _movieRepository.Update(movie);
-            return true;
+            return _mapper.Map<MovieDto>(movie);
         }
 
         public async Task<bool> DeleteAsync(string id)
