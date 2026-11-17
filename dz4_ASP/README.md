@@ -37,7 +37,7 @@
 ### 6. Помилка 5 — Недопустимий рік випуску (`400 Bad Request`)
 * **Запит:** `PUT /api/Movie/1` зі значенням `"releaseYear": 1800`.
 * **Очікуваний та фактичний результат:** `400 Bad Request` (`Must be between 1888 and 2030`), змін у БД немає.
-![Test 5](images/Test%205.png)
+![Test 5](images/Test%205.jpg)
 
 ---
 
