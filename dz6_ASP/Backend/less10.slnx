@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Bll/Bll.csproj" Id="31e84306-379b-4820-87b5-f3c3fce904c1" />
+  <Project Path="Dll/Dll.csproj" Id="a1b913d5-a25f-46bc-8b2d-0a4d6d25df0d" />
+  <Project Path="Domain/Domain.csproj" Id="e891cb15-8f4a-4225-beaa-29a2bf362d93" />
+  <Project Path="less10/less10.csproj" />
+</Solution>
